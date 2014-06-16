@@ -9,10 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var count = 0
+    
+    @IBOutlet var myLabel : UILabel
+    @IBAction func myPlusButton(sender : AnyObject) {
+        count++
+        myLabel.text = String(count)
+    }
                             
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        myLabel.text = String(count)
     }
 
     override func didReceiveMemoryWarning() {
